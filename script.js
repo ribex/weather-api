@@ -11,11 +11,18 @@ function getLocation() {
     }
 }
 
+
 function showPosition(position) {
-    locationText.innerHTML = "Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude;
+    var positionObj = {
+        "lat": position.coords.latitude,
+        "lon": position.coords.longitude
+    };
+
+
+    locationText.innerHTML = "Latitude: " + positionObj.lat + 
+    "<br>Longitude: " + positionObj.lat;
     
     var weatherUrlText = document.getElementById("weather-url-text");
-    weatherUrlText.innerHTML = "https://fcc-weather-api.glitch.me/api/current?lon=:"+ position.coords.longitude + "&lat=:" + position.coords.latitude;
+    weatherUrlText.innerHTML = "https://fcc-weather-api.glitch.me/api/current?lon=:"+ positionObj.lon + "&lat=:" + positionObj.lat;
 
 }

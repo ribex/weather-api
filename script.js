@@ -13,3 +13,6 @@ function showPosition(position) {
     locationText.innerHTML = "Latitude: " + position.coords.latitude + 
     "<br>Longitude: " + position.coords.longitude;
 }
+
+
+var weatherUrl = "https://fcc-weather-api.glitch.me/";
